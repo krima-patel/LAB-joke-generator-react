@@ -7,7 +7,7 @@ function Home() {
 
   const handleClick = () => {
     if (btnText === 'Get a Joke' || btnText === 'Get Another Joke') {
-      getJoke().then(setJoke).then(() => {
+      getJoke().then((obj) => setJoke(obj)).then(() => {
         setBtnText('Get Punchline');
       });
     } else if (btnText === 'Get Punchline') {
