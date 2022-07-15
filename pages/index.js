@@ -6,12 +6,12 @@ function Home() {
   const [btnText, setBtnText] = useState('Get a Joke');
 
   const handleClick = () => {
-    if (btnText === 'Get a Joke' || btnText === 'Get Another Joke') {
+    if (btnText === 'Get a Joke' || btnText === 'Wanna See Another Joke?') {
       getJoke().then((obj) => setJoke(obj)).then(() => {
         setBtnText('Get Punchline');
       });
     } else if (btnText === 'Get Punchline') {
-      setBtnText('Get Another Joke');
+      setBtnText('Wanna See Another Joke?');
     }
   };
 
@@ -23,11 +23,16 @@ function Home() {
         padding: '30px',
         maxWidth: '400px',
         margin: '0 auto',
+        border: '3px dotted #e6e6e6',
+        borderWidth: '15px',
+        marginTop: '50px',
+        marginBottom: '50px',
       }}
+
     >
       <>
         <h1>{ btnText === 'Get A Joke' ? '' : joke.setup }</h1>
-        <h4><b>{ btnText === 'Get Another Joke' ? joke.delivery : ''}</b></h4>
+        <h4><b>{ btnText === 'Wanna See Another Joke?' ? joke.delivery : ''}</b></h4>
         <button type="button" onClick={handleClick}>{btnText}</button>
       </>
     </div>

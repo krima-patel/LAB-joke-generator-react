@@ -7,10 +7,10 @@ import {
 
 export default function NavBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
       <Container>
         <Link passHref href="/">
-          <Navbar.Brand>Got Jokes!</Navbar.Brand>
+          <Navbar.Brand>Got Jokes?!</Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
